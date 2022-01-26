@@ -18,8 +18,8 @@ class Resource(models.Model):
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)    
-    video = models.FileField(upload_to='media/videos', blank=True)
-    document = models.FileField(upload_to='media/documents', blank=True)
+    video = models.FileField(upload_to='media/videos', blank=True, max_length=255)
+    document = models.FileField(upload_to='media/documents', blank=True, max_length=255)
     
     # * Metada
     class Meta:
